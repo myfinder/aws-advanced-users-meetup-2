@@ -39,6 +39,8 @@ ___
 - アクセスコントロールは Security Group で設定
 - 個別のインスタンスに名前は付けない
  - したがって<span style="color: red">内部 DNS 廃止</span> / IP 付与も DHCP 任せ
+- セットアップ->運用はAnsibleの継続適用
+ - しょぼい適用ミスの障害が出たりしてた
 
 ___
 
@@ -69,6 +71,7 @@ ___
  - 複雑なセットアップが要らない
  - 通知はSNS使わず、Mackerel/Slackにまとめた
 - cloud-init と shutdown 時のスクリプトで処理
+ - Ansible廃止
  - 起動時に cloud-init で監視/セットアップ
  - 停止時に init.d スクリプトで通知/監視停止
  - AWS にロックインされにくい体にしたい向きもあった
